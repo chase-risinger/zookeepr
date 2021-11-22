@@ -31,8 +31,8 @@ function filterByQuery(query, animalsArray) {
             // Basically what this is actually saying for a normal human being to understand is this...
             // PersonalityTraitsArray is an array with one or more elements, thanks to the previous 3 lines of code
             // for each one of those traits (or for just the one trait, if only one) 
-            // we have created a function that will give us filteredResults (yes again, stupid naming convention from this shit 
-            // of a school) filteredResults is going to be itself filtered (I know), with each animal (element) only being allowed in the new
+            // we have created a function that will give us filteredResults 
+            // filteredResults is going to be itself filtered (I know), with each animal (element) only being allowed in the new
             // filteredResults if it's personalityTraits contains the trait(s) from personalityTraitsArray 
             filteredResults = filteredResults.filter(
                 animal => animal.personalityTraits.indexOf(trait) !== -1
@@ -54,6 +54,7 @@ function filterByQuery(query, animalsArray) {
 
 function findById(id, animalsArray) {
     const result = animalsArray.filter(animal => animal.id === id)[0];
+    console.log(result)
     return result;
 }
 
